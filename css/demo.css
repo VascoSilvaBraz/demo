@@ -150,26 +150,10 @@ a {
   z-index: 100;
   padding-left: 70px;
   padding-right: 70px;
-  width: 400px;
-  max-width: 400px;
+  width: 356px;
+  max-width: 356px;
   background-image: url(../img/bg-sidenave-top-demonio.png);
 }
-
-
-.tm-sidebar::after {
-  position: absolute;
-  bottom: 0;
-  background-image: url(../img/bg-sidenave-bottom.png);
-  content: "";
-  height: 277px;
-  left: 0;
-
-  width: 100%;
-}
-
-
-
-
 
 /* Hide scrollbar */
 .tm-sidebar {
