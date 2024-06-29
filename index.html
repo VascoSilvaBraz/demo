@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Demónios do Lizandro</title>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/demo.css" />
+  </head>
+
+  <body>
+    <main class="container-fluid">
+      <div class="row">
+        <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar">
+          <button class="navbar-toggler" type="button"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="tm-sidebar-sticky">
+            <div class="tm-brand-box">
+              <div class>
+                <div class>
+                  <h1 class="tm-brand text-uppercase">Demonios do Lizandro</h1>
+                </div>
+              </div>
+            </div>
+
+            <ul id="tmMainNav"
+              class="nav flex-column text-uppercase text-left tm-main-nav">
+              <li class="nav-item">
+                <a href="#intro" class="nav-link active">
+                  <span class="d-inline-block mr-3">Quem Somos</span>
+                  <span class="d-inline-block tm-white-rect"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#about" class="nav-link">
+                  <span class="d-inline-block mr-3">Eventos</span>
+                  <span class="d-inline-block tm-white-rect"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#work" class="nav-link">
+                  <span class="d-inline-block mr-3">Treinos</span>
+                  <span class="d-inline-block tm-white-rect"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#clients" class="nav-link">
+                  <span class="d-inline-block mr-3">O que dizem de nós</span>
+                  <span class="d-inline-block tm-white-rect"></span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#talk" class="nav-link">
+                  <span class="d-inline-block mr-3">Contactos</span>
+                  <span class="d-inline-block tm-white-rect"></span>
+                </a>
+              </li>
+            </ul>
+            <ul class="nav flex-row tm-social-links">
+              <li class="nav-item">
+                <a
+                  href="https://www.facebook.com/p/Dem%C3%B3nios-do-Lizandro-100083921881053/"
+                  class="nav-link tm-social-link">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://www.instagram.com/demoniosdolizandro/"
+                  class="nav-link tm-social-link">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+
+            </ul>
+            <footer class="text-center text-white small">
+
+            </footer>
+          </div>
+        </nav>
+
+        <main role="main" class="ml-sm-auto col-12">
+          <div class="parallax-window" data-parallax="scroll"
+            data-image-src="img/ribeira.jpg">
+            <div class="tm-section-wrap">
+              <section id="intro" class="tm-section">
+                <div class="tm-bg-white-transparent tm-intro">
+                  <h2
+                    class="tm-section-title mb-3 text-uppercase tm-color-primary">Quem
+                    Somos</h2>
+                  <p class="tm-color-gray">
+                    Somos um grupo de demónios que adoramos percorrer os trilhos
+                    junto ao rio Lizandro e de dar a conhece-los também ...
+                    O Lizandro nasce na Venda do Pinheiro e desagua na praia foz
+                    do Lizandro na Ericeira no concelho de Mafra.
+                  </p>
+           
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="tm-section-wrap bg-white">
+
+            <section id="about" class="row tm-section">
+              <img class="img-header_evento"
+                src="img/III-ultra-trail-dos-demonios.png"
+                alt="III Ultra Trail dos Demónios do Lizandro">
+              <div class="col-xl-6">
+                <div class="tm-section-half">
+                  <!-- Display the countdown timer in an element -->
+                  <h2 class="tm-section-title tm-color-primary mb-5">Próximo
+                    Evento</h2>
+                  <p id="demo"></p>
+                  <script>
+                  // Set the date we're counting down to
+                  var countDownDate = new Date("NOV 3, 2024 7:45:00").getTime();
+
+                  // Update the count down every 1 second
+                  var x = setInterval(function () {
+
+                    // Get today's date and time
+                    var now = new Date().getTime();
+
+                    // Find the distance between now and the count down date
+                    var distance = countDownDate - now;
+
+                    // Time calculations for days, hours, minutes and seconds
+                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                    // Display the result in the element with id="demo"
+                    document.getElementById("demo").innerHTML = days + " dias " + hours + " horas " +
+                      minutes + " minutos " + seconds + " segundos ";
+
+                    // If the count down is finished, write some text
+                    if (distance < 0) {
+                      clearInterval(x);
+                      document.getElementById("demo").innerHTML = "EXPIRED";
+                    }
+                  }, 1000);
+                </script>
+
+                  <p>
+                    O <b>3° Trail Demónios do Lizandro</b>  será composto por um
+                    percurso sempre junto às margens do Rio Lizandro com 3
+                    percursos competitivos: 
+                  </p>
+                  <p>Ultra Trail 50k 2200D+</p>
+                  <p>
+                    Trail Longo 25k 1200D+
+                  </p> <p>
+                    Trail Curto 16k 750 D+
+                  </p> <p>
+                    O TL e TC inseridos no Circuito Trail de Lisboa da AAL
+                    2024/25
+                  </p> <p>
+                    E uma caminhada com 12kms
+                  </p> <p>
+                    Um percurso circular com início e fim na Sociedade
+                    Recreativa Santa Susana e Pobral a cerca de 10kms da Vila
+                    Ericeira e de Mafra e a 15kms de Sintra
+                    Vem conhecer os trilhos do Lizandro e terás um belo carrocel
+                    á tua espera.
+                  </p> <p>
+                    <b>No valor da inscrição está incluído:</b> <br>
+                    • Dorsal;<br>
+                    • Chip (exceto caminhantes);<br>
+                    • Abastecimentos líquidos e sólidos;<br>
+                    • Apoio logístico;<br>
+                    • Seguro desportivo;<br>
+                    • Banhos
+                  </p> <p>
+
+                    <b>Escalões de participação:</b><br>
+                    • Juniores M/F – 18 aos 19 anos (até 21 km)<br>
+                    • Sub23 M/F – 20 aos 22 anos<br>
+                    • Seniores M/F – 23 aos 34 anos<br>
+                    • Veteranos M/F 35 – 35 aos 40 anos<br>
+                    • Veteranos M/F 40 – 40 aos 44 anos<br>
+                    • Veteranos M/F 45 – 45 aos 49 anos<br>
+                    • Veteranos M/F 50 – 50 aos 54 anos<br>
+                    • Veteranos M/F 55 – 55 aos 59 anos<br>
+                    • Veteranos M/F 60 – 60 aos 64 anos<br>
+                    • Veteranos M/F 65 – 65 aos 69 anos<br>
+                    • Veteranos M/F 70 – 70 aos 74 anos<br>
+                    • Veteranos M 75 – 75 aos 79 anos<br>
+                    • Veteranos M 80 – 80 aos 84 anos<br>
+                    • Veteranos M 85 – 85 ou mais anos<br>
+                    Nota: Data de referência dos escalões é dia 31 de Dezembro
+                    de 2024
+                  </p> <p>
+
+                    <b>Prémios:</b><br>
+                    - Prémios para os 3 primeiros classificados da geral
+                    masculina e feminina<br>
+                    - Prémios monetários para os 3 primeiros classificados da
+                    geral masculina e feminina<br>
+                    - Prémios para os 3 primeiros classificados de cada escalão
+                    - Prémios para as 3 primeiras equipas<br>
+                    - Prémio para equipa com mais inscritos (total das
+                    distâncias)
+                  </p>
+                </div>
+              </div>
+      
+            </section>
+          </div>
+
+          <div class="tm-section-wrap bg-white">
+            <section id="work" class="row tm-section">
+              <div class="col-12">
+                <div class="w-100 tm-double-border-1 tm-border-gray">
+                  <div class="tm-double-border-2 tm-border-gray tm-box-pad">
+                    <div class="tm-gallery-wrap">
+                      <h2
+                        class="tm-color-primary tm-section-title mb-4 ml-2">Treinos</h2>
+                      <div class="tm-gallery-0">
+                        <div class="tm-gallery-item">
+                          <figure class="effect-bubba">
+                            <img src="img/gallery/01.jpg" alt="Our Work Image"
+                              class="img-fluid">
+                            <figcaption>
+                              <h2>Fresh <span>Bubba</span></h2>
+                              <p>Bubba likes to appear out of thin air.</p>
+                              <a href="img/gallery/01.jpg">View more</a>
+                            </figcaption>
+                          </figure>
+                        </div>
+                        <div class="tm-gallery-item">
+                          <figure class="effect-bubba">
+                            <img src="img/gallery/02.jpg" alt="Our Work Image"
+                              class="img-fluid">
+                            <figcaption>
+                              <h2>Fresh <span>Bubba</span></h2>
+                              <p>Bubba likes to appear out of thin air.</p>
+                              <a href="img/gallery/02.jpg">View more</a>
+                            </figcaption>
+                          </figure>
+                        </div>
+                        <div class="tm-gallery-item">
+                          <figure class="effect-bubba">
+                            <img src="img/gallery/03.jpg" alt="Our Work Image"
+                              class="img-fluid">
+                            <figcaption>
+                              <h2>Fresh <span>Bubba</span></h2>
+                              <p>Bubba likes to appear out of thin air.</p>
+                              <a href="img/gallery/03.jpg">View more</a>
+                            </figcaption>
+                          </figure>
+                        </div>
+                        <div class="tm-gallery-item">
+                          <figure class="effect-bubba">
+                            <img src="img/gallery/04.jpg" alt="Our Work Image"
+                              class="img-fluid">
+                            <figcaption>
+                              <h2>Fresh <span>Bubba</span></h2>
+                              <p>Bubba likes to appear out of thin air.</p>
+                              <a href="img/gallery/04.jpg">View more</a>
+                            </figcaption>
+                          </figure>
+                        </div>
+                        <div class="tm-gallery-item">
+                          <figure class="effect-bubba">
+                            <img src="img/gallery/05.jpg" alt="Our Work Image"
+                              class="img-fluid">
+                            <figcaption>
+                              <h2>Fresh <span>Bubba</span></h2>
+                              <p>Bubba likes to appear out of thin air.</p>
+                              <a href="img/gallery/05.jpg">View more</a>
+                            </figcaption>
+                          </figure>
+                        </div>
+                        <div class="tm-gallery-item">
+                          <figure class="effect-bubba">
+                            <img src="img/gallery/06.jpg" alt="Our Work Image"
+                              class="img-fluid">
+                            <figcaption>
+                              <h2>Fresh <span>Bubba</span></h2>
+                              <p>Bubba likes to appear out of thin air.</p>
+                              <a href="img/gallery/06.jpg">View more</a>
+                            </figcaption>
+                          </figure>
+                        </div>
+                        <div class="tm-gallery-item">
+                          <figure class="effect-bubba">
+                            <img src="img/gallery/07.jpg" alt="Our Work Image"
+                              class="img-fluid">
+                            <figcaption>
+                              <h2>Fresh <span>Bubba</span></h2>
+                              <p>Bubba likes to appear out of thin air.</p>
+                              <a href="img/gallery/07.jpg">View more</a>
+                            </figcaption>
+                          </figure>
+                        </div>
+
+                      <div class="tm-gallery-item">
+                        <figure class="effect-bubba">
+                          <img src="img/gallery/08.jpg" alt="Our Work Image"
+                            class="img-fluid">
+                          <figcaption>
+                            <h2>Fresh <span>Bubba</span></h2>
+                            <p>Bubba likes to appear out of thin air.</p>
+                            <a href="img/gallery/08.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="tm-gallery-item">
+                        <figure class="effect-bubba">
+                          <img src="img/gallery/09.jpg" alt="Our Work Image"
+                            class="img-fluid">
+                          <figcaption>
+                            <h2>Fresh <span>Bubba</span></h2>
+                            <p>Bubba likes to appear out of thin air.</p>
+                            <a href="img/gallery/09.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="tm-section-wrap bg-white">
+            <section id="clients" class="row tm-section">
+              <div class="col-12 tm-section-pad">
+                <div class="tm-flex-item-left">
+                  <div class="tm-w-80">
+                    <h2 class="tm-color-primary tm-section-title mb-4">O que
+                      dizem de nós</h2>
+                    <p class="mb-5">
+                      Estes são alguns dos testemunhos do II Trail dos Demónios
+                      do Lizandro.
+                    </p>
+                  </div>
+
+                  <div class="tm-gallery-1">
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img src="img/testemunhos-carla.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Carla <span>Henriques</span></h2>
+                          <a href="img/testemunhos-carla.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img src="img/testemunhos-castela.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Samuel <span>Castela</span></h2>
+        
+                          <a href="img/testemunhos-castela.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img src="img/testemunhos-catia.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Cátia <span>Nascimento</span></h2>
+                    
+                          <a href="img/testemunhos-catia.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img src="img/testemunhos-orlando.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Orlando <span>Duarte</span></h2>
+                
+                          <a href="img/testemunhos-orlando.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img src="img/testemunhos-vitor.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Vitor <span>Ribeiro</span></h2>
+                        
+                          <a href="img/testemunhos-vitor.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img src="img/testemunhos-zarro.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Mário <span>Zarro</span></h2>
+                     
+                          <a href="img/testemunhos-zarro.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="tm-section-wrap bg-white">
+            <section id="talk" class="row tm-section">
+              <div class="col-xl-6 mb-5">
+                <div class="tm-double-border-1 tm-border-gray">
+                  <div class="tm-double-border-2 tm-border-gray tm-box-pad">
+                    <h2
+                      class="tm-color-primary tm-section-title mb-4">Contactos</h2>
+
+                    <p class="mb-4">
+                      <i class="fas fa-1x fa-phone fa-rotate-90"></i>
+                      <a href="callto:926 520 754">926 520 754</a>
+                    </p>
+
+                    <p class="mb-3">
+                      <i class="fas fa-1x fa-mail-bulk "></i>
+                      <a href="mailto:demoniosdolizandro@gmail.com">demoniosdolizandro@gmail.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/templatemo-scripts.js"></script>
+  </body>
+
+</html>
