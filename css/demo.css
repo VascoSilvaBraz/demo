@@ -98,7 +98,6 @@ a {
   letter-spacing: 0.1em;
   text-align: center;
   color: #1f1f1f;
-  margin-left: -10px;
 }
 
 
@@ -112,7 +111,7 @@ a {
   top: -28px;
   color: #1f1f1f;
   display: inline-block;
-  right: 188px;
+  right: 109px;
   font-family: "Tattoo Ink", cursive;
 }
 
@@ -147,8 +146,6 @@ a {
   bottom: 0;
   left: 0;
   z-index: 100;
-  padding-left: 70px;
-  padding-right: 70px;
   width: 356px;
   max-width: 356px;
   background-image: url(../img/bg-sidenave-top-demonio.png);
@@ -582,7 +579,6 @@ figure.effect-bubba:hover p {
 @media (max-width: 1600px) {
   .tm-sidebar {
     width: 35%;
-    max-width: none;
     padding-left: 30px;
     padding-right: 30px;
   }
