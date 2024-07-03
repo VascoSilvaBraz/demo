@@ -63,8 +63,8 @@ a {
   align-items: center;
   height: auto;
   max-width: 1275px;
-  padding: 50px;
   margin: 0 auto;
+  width: 86%;
 }
 
 #intro {
@@ -535,6 +535,11 @@ figure.effect-bubba:hover p {
   max-width: 80%;
 }
 
+.demonios-evento-img {
+  margin: 0 -14.6% 20px -14.6%;
+
+}
+
 .tm-flex-item-left {
   align-self: flex-start;
 }
@@ -699,18 +704,7 @@ figure.effect-bubba:hover p {
   }
 }
 
-@media (max-width: 767px) {
-  .tm-section {
-    padding: 30px;
-  }
-}
 
-@media (max-width: 554px) {
-  .tm-section {
-    padding: 15px;
-    margin-inline: 40px;
-  }
-}
 
 @media (max-width: 383px) {
   .slick-dots {
