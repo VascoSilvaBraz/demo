@@ -5789,7 +5789,7 @@
     font-style: normal;
     font-weight: 900;
     font-display: auto;
-    src: url(../webfonts/TATTI___.woffTATTI___.woff2) format("woff2")
+    src: url(../webfonts/TATTI___.woffTATTI___.woff2) format("woff2"), url(../webfonts/TATTI___.TTF) format("truetype")
 }
 
 
