@@ -1,10 +1,10 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 400;
   overflow-x: hidden;
   color: #707172;
-  background-color: #666;
+  background-color: #C1C4AD;
 }
 
 p {
@@ -43,13 +43,14 @@ a {
 
 .tm-intro {
   width: 100%;
-  padding: 55px;
+  padding: 30px;
   margin-right: 0;
   margin-left: auto;
 }
 
 .tm-section-title {
   font-size: 1.6rem;
+  font-weight: 900;
 }
 
 .parallax-window {
@@ -62,7 +63,8 @@ a {
   align-items: center;
   height: auto;
   max-width: 1275px;
-  padding: 66px 60px;
+  padding: 50px;
+  margin: 0 auto;
 }
 
 #intro {
@@ -131,7 +133,7 @@ a {
 }
 
 .tm-box-pad {
-  padding: 50px 55px;
+  padding: 30px;
 }
 
 
@@ -215,7 +217,10 @@ a {
   display: block;
   width: 15px;
   height: 15px;
-  background-color: var(--primary);
+  background-image: url(../img/favicon.png);
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .nav-link {
@@ -289,7 +294,7 @@ a {
 }
 
 .tm-section-half {
-  padding: 55px;
+  padding: 5%;
 }
 
 .tm-section-icon {
@@ -345,7 +350,7 @@ a {
 }
 
 .slick-dots {
-  bottom: -50px;
+  bottom: -40px;
 }
 
 .slick-dots li button:before {
@@ -592,8 +597,9 @@ figure.effect-bubba:hover p {
 }
 
 
-
-
+#talk a {
+  font-size: clamp(17px, 4vw, 22px);
+}
 
 .form-control:focus {
   outline: none;
@@ -611,9 +617,7 @@ figure.effect-bubba:hover p {
     margin: 5px;
   }
 
-  .tm-section-wrap {
-    width: 65%;
-  }
+
 
   .tm-img-wrap a {
     width: 100%;
@@ -704,6 +708,7 @@ figure.effect-bubba:hover p {
 @media (max-width: 554px) {
   .tm-section {
     padding: 15px;
+    margin-inline: 40px;
   }
 }
 
