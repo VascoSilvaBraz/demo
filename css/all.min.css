@@ -5829,11 +5829,8 @@
 
 @font-face {
     font-family: 'league_gothicregular';
-    src: url('../webfonts/leaguegothic-regular-webfont.eot');
-    src: url('../webfonts/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
-        url('../webfonts/leaguegothic-regular-webfont.woff') format('woff'),
-        url('../webfonts/leaguegothic-regular-webfont.ttf') format('truetype'),
-        url('../webfonts/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+    src: url('../webfonts/leaguegothic-regular-webfont.woff2') format('woff2'),
+        url('../webfonts/leaguegothic-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
