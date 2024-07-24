@@ -182,7 +182,7 @@ a {
 }
 
 .title-menu-wrapper #tmMainNav {
-  text-shadow: 0;
+  text-shadow: none;
 }
 
 /* Hide scrollbar */
@@ -816,7 +816,7 @@ figure.effect-bubba:hover p {
 
   #tmMainNav {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
   }
 
   #tmMainNav .nav-link {
