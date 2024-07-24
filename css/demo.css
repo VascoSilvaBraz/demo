@@ -774,7 +774,7 @@ figure.effect-bubba:hover p {
 
   #tmSidebar.tm-sidebar .tm-sidebar-sticky {
 
-    width: 86%;
+    width: 96%;
     padding-top: 8px;
     display: grid;
   }
@@ -820,7 +820,7 @@ figure.effect-bubba:hover p {
   }
 
   #tmMainNav .nav-link {
-    font-size: 14px;
+    font-size: 12px;
     padding-block: 2px;
     font-weight: 900;
     display: flex;
