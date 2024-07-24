@@ -22,8 +22,7 @@
     <meta name="twitter:site" content="Demónios do Lizandro" />
     <meta name="twitter:creator" content="Demónios do Lizandro" />
     <meta name="twitter:title" content="Demónios do Lizandro" />
-    <meta name="twitter:description"
-      content="Demónios do Lizandro" />
+    <meta name="twitter:description" content="Demónios do Lizandro" />
     <meta name="twitter:image" content="img/bg-only-demonio.png" />
     <meta name="description" content="Demónios do Lizandro" />
     <title>Demónios do Lizandro</title>
@@ -36,83 +35,166 @@
     <link rel="stylesheet" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/demo.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600'
+      rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    // MediaLoot jQuery Countdown Timer
+    // Description: Allows you to choose which unit of time from which to countdown and allows you to style each unit of time separately.
+    // Author: Natalie Hipp | MediaLoot.com
+    // URL: http://medialoot.com/item/
+
+    $(document).ready(function () {
+
+      function mlCountdown() {
+        // Step 1: Make sure to call jQuery in your <head>
+        // Step 2: Fill in the following two variables
+        var eventTime = '1730621288'; // Unix Event Time - Get your stamp from http://www.unixtimestamp.com/index.php
+
+        var startFrom = 'D'; // Adjust from which time unit you'd like to countdown: Use D for days, H for hours, M for minutes, or S for seconds.
+
+        // Step 3: Add some spans in your HTML
+        /* Each Unit of time is displayed independently so that you can style them differently. 
+      	
+        Create <span>'s for each unit of time. Each span must have the class "ml-countdown" and then add the appropriate following classes for what you'd like to display: "days", "hours", "minutes", & "seconds". 
+      	
+        For example, to display the number of days remaining, add this: <span class="ml-countdown days"></span>
+        */
+
+        // We'll take it from here
+        var currentTime = Math.round(new Date().getTime() / 1000); // Grabs current time in seconds
+        var timeLeft = eventTime - currentTime;
+
+        // Calculate numbers based on what kind of time they want to count from
+        if (startFrom == 'S') {
+          var scLeft = Math.floor(timeLeft);
+
+          $(".ml-countdown.seconds").html(scLeft);
+        }
+        else if (startFrom == 'M') {
+          var minLeft = Math.floor(timeLeft / 60);
+          var scLeft1 = timeLeft - (minLeft * 60); // number of whole minutes
+          var scLeft = Math.floor(scLeft1);
+
+          $(".ml-countdown.minutes").html(minLeft);
+          $(".ml-countdown.seconds").html(scLeft);
+        }
+        else if (startFrom == 'H') {
+          var hrLeft = Math.floor(timeLeft / 60 / 60);
+          var minLeft1 = hrLeft * 60 * 60; // number of whole hours
+          var minLeft2 = timeLeft - minLeft1;
+          var minLeft = Math.floor(minLeft2 / 60);
+          var scLeft1 = minLeft * 60; //number of whole minutes
+          var scLeft2 = timeLeft - minLeft1 - scLeft1;
+          var scLeft = Math.floor(scLeft2);
+
+          $(".ml-countdown.hours").html(hrLeft);
+          $(".ml-countdown.minutes").html(minLeft);
+          $(".ml-countdown.seconds").html(scLeft);
+        }
+        // Otherwise, default as if counting from days
+        else {
+          var dayLeft = Math.floor(timeLeft / 60 / 60 / 24);
+          var hrLeft1 = dayLeft * 24 * 60 * 60; // days left in seconds
+          var hrLeft2 = timeLeft - hrLeft1;
+          var hrLeft = Math.floor(hrLeft2 / 60 / 60);
+          var minLeft1 = hrLeft * 60 * 60; // hours left in seconds
+          var minLeft2 = timeLeft - hrLeft1 - minLeft1;
+          var minLeft = Math.floor(minLeft2 / 60);
+          var scLeft1 = minLeft * 60; // minutes left in seconds
+          var scLeft2 = timeLeft - hrLeft1 - minLeft1 - scLeft1;
+          var scLeft = Math.floor(scLeft2);
+
+
+          $(".ml-countdown.days").html(dayLeft);
+          $(".ml-countdown.hours").html(hrLeft);
+          $(".ml-countdown.minutes").html(minLeft);
+          $(".ml-countdown.seconds").html(scLeft);
+        }
+      }
+
+      window.onload = mlCountdown;
+      window.setInterval(mlCountdown, 1000);
+
+    });
+  </script>
+
   </head>
 
   <body>
-    <main class="container-fluid">
-      <div class="row">
-        <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar">
-          <button class="navbar-toggler" type="button"
-            aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="tm-sidebar-sticky">
-            <div class="tm-brand-box">
+    <main class="container-fluid noise">
+      <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar">
+
+        <div class="tm-sidebar-sticky">
+          <div class="tm-brand-box">
+            <div class="title-menu-wrapper">
               <div class>
-                <div class>
-                  <h1 class="tm-brand text-uppercase">Demonios do Lizandro</h1>
-                </div>
+                <h1 class="tm-brand text-uppercase">Demónios do Lizandro</h1>
               </div>
+              <ul id="tmMainNav"
+                class="nav flex-column text-uppercase text-left tm-main-nav">
+                <li class="nav-item">
+                  <a href="#intro" class="nav-link active">
+                    <span class="d-inline-block mr-1">Quem Somos</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#about" class="nav-link">
+                    <span class="d-inline-block mr-1">Eventos</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <!--     <li class="nav-item">
+            <a href="#work" class="nav-link">
+              <span class="d-inline-block mr-1">Treinos</span>
+              <span class="d-inline-block tm-white-rect"></span>
+            </a>
+          </li> -->
+                <li class="nav-item">
+                  <a href="#clients" class="nav-link">
+                    <span class="d-inline-block mr-1">Testemunhos</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#contactos" class="nav-link">
+                    <span class="d-inline-block mr-1">Contactos</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+              </ul>
             </div>
-
-            <ul id="tmMainNav"
-              class="nav flex-column text-uppercase text-left tm-main-nav">
-              <li class="nav-item">
-                <a href="#intro" class="nav-link active">
-                  <span class="d-inline-block mr-3">Quem Somos</span>
-                  <span class="d-inline-block tm-white-rect"></span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#about" class="nav-link">
-                  <span class="d-inline-block mr-3">Eventos</span>
-                  <span class="d-inline-block tm-white-rect"></span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#work" class="nav-link">
-                  <span class="d-inline-block mr-3">Treinos</span>
-                  <span class="d-inline-block tm-white-rect"></span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#clients" class="nav-link">
-                  <span class="d-inline-block mr-3">Testemunhos</span>
-                  <span class="d-inline-block tm-white-rect"></span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#talk" class="nav-link">
-                  <span class="d-inline-block mr-3">Contactos</span>
-                  <span class="d-inline-block tm-white-rect"></span>
-                </a>
-              </li>
-            </ul>
-            <ul class="nav flex-row tm-social-links">
-              <li class="nav-item">
-                <a
-                  href="https://www.facebook.com/p/Dem%C3%B3nios-do-Lizandro-100083921881053/"
-                  class="nav-link tm-social-link">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.instagram.com/demoniosdolizandro/"
-                  class="nav-link tm-social-link">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </li>
-
-            </ul>
-            <footer class="text-center text-white small">
-
-            </footer>
           </div>
-        </nav>
+
+          <ul class="nav flex-row tm-social-links">
+            <li class="nav-item">
+              <a
+                href="https://www.facebook.com/p/Dem%C3%B3nios-do-Lizandro-100083921881053/"
+                class="nav-link tm-social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://www.instagram.com/demoniosdolizandro/"
+                class="nav-link tm-social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+
+          </ul>
+          <footer class="text-center text-white small">
+
+          </footer>
+        </div>
+      </nav>
+      <div class="row">
 
         <main role="main" class="ml-sm-auto col-12">
           <div class="parallax-window" data-parallax="scroll"
-            data-image-src="img/ribeira.jpg">
+            data-image-src="img/ribeira.png">
             <div class="tm-section-wrap">
               <section id="intro" class="tm-section">
                 <div class="tm-bg-white-transparent tm-intro">
@@ -131,50 +213,38 @@
             </div>
           </div>
 
-          <div class="tm-section-wrap bg-white">
+          <div  class="tm-section-wrap ">
+<div id="about"></div>
+            <section class="row tm-section">
 
-            <section id="about" class="row tm-section">
-              
               <div class>
                 <div class="tm-section-half">
                   <!-- Display the countdown timer in an element -->
                   <h2 class="tm-section-title tm-color-primary mb-4">Próximo
                     Evento</h2>
-                <figure class="demonios-evento-img">
+                  <figure class="demonios-evento-img">
                     <img loading="lazy" class="img-header_evento"
-                src="img/III-ultra-trail-dos-demonios.png"
-                alt="III Ultra Trail dos Demónios do Lizandro">
-                </figure>
-                    <p id="demo"></p>
+                      src="img/III-ultra-trail-dos-demonios.png"
+                      alt="III Ultra Trail dos Demónios do Lizandro">
+                  </figure>
+                  <p id="demo"></p>
                   <a
                     href="https://www.trilhoperdido.com/evento/3-trail-demonios-do-lizandro"
                     target="_blank"
                     class="btn tm-btn tm-font-big tm-btn-primary mb-5">Inscreve-te
                     já</a>
-                  <script>
-                  // Set the date we're counting down to
-                  var countDownDate = new Date("NOV 3, 2024 7:45:00").getTime();
-                  // Update the count down every 1 second
-                  var x = setInterval(function () {
-                    // Get today's date and time
-                    var now = new Date().getTime();
-                    // Find the distance between now and the count down date
-                    var distance = countDownDate - now;
-                    // Time calculations for days, hours, minutes and seconds
-                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                    // Display the result in the element with id="demo"
-                    document.getElementById("demo").innerHTML = days + " dias " + hours + " horas " +
-                      minutes + " minutos " + seconds + " segundos ";
-                    // If the count down is finished, write some text
-                    if (distance < 0) {
-                      clearInterval(x);
-                      document.getElementById("demo").innerHTML = "EXPIRED";
-                    }
-                  }, 1000);
-                </script>
+                  <div
+                    class="content count-down tm-double-border-1 tm-border-gray mb-4">
+
+                    <ul>
+                      <li><span class="ml-countdown days"></span>Dias</li>
+                      <li><span class="ml-countdown hours"></span>Horas</li>
+                      <li><span class="ml-countdown minutes"></span>Minutos</li>
+                      <li><span
+                          class="ml-countdown seconds"></span>Segundos</li>
+                    </ul>
+
+                  </div>
 
                   <p>
                     O <b>3° Trail Demónios do Lizandro</b> será composto por um
@@ -238,7 +308,8 @@
                     masculina e feminina<br>
                     - Prémios monetários para os 3 primeiros classificados da
                     geral masculina e feminina<br>
-                    - Prémios para os 3 primeiros classificados de cada escalão<br>
+                    - Prémios para os 3 primeiros classificados de cada
+                    escalão<br>
                     - Prémios para as 3 primeiras equipas<br>
                     - Prémio para equipa com mais inscritos (total das
                     distâncias)
@@ -249,237 +320,230 @@
             </section>
           </div>
 
-          <div class="tm-section-wrap bg-white">
-            <section id="work" class="row tm-section">
-              <div class="col-12">
-                <div class="w-100 tm-double-border-1 tm-border-gray mb-5">
+          <!--   <div class="tm-section-wrap ">
+          <section id="work" class="row tm-section">
+            <div class="col-12">
+              <div class="w-100 tm-double-border-1 tm-border-gray mb-5">
+                <div class="tm-double-border-2 tm-border-gray tm-box-pad">
+                  <div class="tm-gallery-wrap">
+                    <h2 class="tm-color-primary tm-section-title mb-4 ml-2">Treinos</h2>
+                    <div class="tm-gallery-0">
+                      <div class="tm-gallery-item">
+                        <figure class="effect-bubba">
+                          <img loading="lazy" src="img/gallery/01.jpg" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>Ericeira <br> <span>Santa Cruz</span></h2>
+
+                            <a href="img/gallery/01.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="tm-gallery-item">
+                        <figure class="effect-bubba">
+                          <img loading="lazy" src="img/gallery/02.jpg" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>Ericeira <br> <span>Santa Cruz</span></h2>
+
+                            <a href="img/gallery/02.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="tm-gallery-item">
+                        <figure class="effect-bubba">
+                          <img loading="lazy" src="img/gallery/03.jpg" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>Ericeira <br> <span>Santa Cruz</span></h2>
+                            <a href="img/gallery/03.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="tm-gallery-item">
+                        <figure class="effect-bubba">
+                          <img loading="lazy" loading="lazy" src="img/gallery/04.jpg" alt="Our Work Image"
+                            class="img-fluid">
+                          <figcaption>
+                            <h2>Ericeira <br> <span>Santa Cruz</span></h2>
+                            <a href="img/gallery/04.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="tm-gallery-item">
+                        <figure class="effect-bubba">
+                          <img loading="lazy" src="img/gallery/05.jpg" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>Ericeira <br> <span>Santa Cruz</span></h2>
+                            <a href="img/gallery/05.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="tm-gallery-item">
+                        <figure class="effect-bubba">
+                          <img loading="lazy" src="img/gallery/06.jpg" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>Ericeira <br> <span>Santa Cruz</span></h2>
+                            <a href="img/gallery/06.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="tm-gallery-item">
+                        <figure class="effect-bubba">
+                          <img loading="lazy" src="img/gallery/07.jpg" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>Ericeira <br> <span>Santa Cruz</span></h2>
+                            <a href="img/gallery/07.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+
+                      <div class="tm-gallery-item">
+                        <figure class="effect-bubba">
+                          <img loading="lazy" src="img/gallery/08.jpg" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>Ericeira <br> <span>Santa Cruz</span></h2>
+                            <a href="img/gallery/08.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+                      <div class="tm-gallery-item">
+                        <figure class="effect-bubba">
+                          <img loading="lazy" src="img/gallery/09.jpg" alt="Our Work Image" class="img-fluid">
+                          <figcaption>
+                            <h2>Ericeira <br> <span>Santa Cruz</span></h2>
+                            <a href="img/gallery/09.jpg">View more</a>
+                          </figcaption>
+                        </figure>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </section>
+        </div> -->
+
+          <div class="tm-section-wrap ">
+            <div id="clients"></div>
+            <section  class="row tm-section">
+              <div class="col-12 mb-5">
+                <div class="tm-flex-item-left">
+                  <div>
+                    <h2 class="tm-color-primary tm-section-title mb-4">O que
+                      dizem de nós</h2>
+                    <p class="mb-5">
+                      Estes são alguns dos testemunhos do II Trail dos
+                      Demónios
+                      do Lizandro.
+                    </p>
+                  </div>
+
+                  <div class="tm-gallery-1">
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img loading="lazy" src="img/testemunhos-carla.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Carla <span>Henriques</span></h2>
+                          <a href="img/testemunhos-carla.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img loading="lazy" src="img/testemunhos-castela.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Samuel <span>Castela</span></h2>
+
+                          <a href="img/testemunhos-castela.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img loading="lazy" src="img/testemunhos-catia.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Cátia <span>Nascimento</span></h2>
+
+                          <a href="img/testemunhos-catia.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img loading="lazy" src="img/testemunhos-orlando.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Orlando <span>Duarte</span></h2>
+
+                          <a href="img/testemunhos-orlando.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img loading="lazy" src="img/testemunhos-vitor.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Vitor <span>Ribeiro</span></h2>
+
+                          <a href="img/testemunhos-vitor.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+                    <div class="tm-gallery-item">
+                      <figure class="effect-bubba">
+                        <img loading="lazy" src="img/testemunhos-zarro.png"
+                          alt="Our Work Image" class="img-fluid">
+                        <figcaption>
+                          <h2>Mário <span>Zarro</span></h2>
+
+                          <a href="img/testemunhos-zarro.png">View more</a>
+                        </figcaption>
+                      </figure>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="tm-section-wrap ">
+            <div id="contactos"></div>
+            <section id="talk" class="row tm-section">
+              <div class="col-xl-12 mb-5">
+                <div class="tm-double-border-1 tm-border-gray">
                   <div class="tm-double-border-2 tm-border-gray tm-box-pad">
-                    <div class="tm-gallery-wrap">
-                      <h2
-                        class="tm-color-primary tm-section-title mb-4 ml-2">Treinos</h2>
-                      <div class="tm-gallery-0">
-                        <div class="tm-gallery-item">
-                          <figure class="effect-bubba">
-                            <img loading="lazy" src="img/gallery/01.jpg" alt="Our Work Image"
-                              class="img-fluid">
-                            <figcaption>
-                              <h2>Ericeira <br> <span>Santa Cruz</span></h2>
+                    <h2
+                      class="tm-color-primary tm-section-title mb-4">Contactos</h2>
 
-                              <a href="img/gallery/01.jpg">View more</a>
-                            </figcaption>
-                          </figure>
-                        </div>
-                        <div class="tm-gallery-item">
-                          <figure class="effect-bubba">
-                            <img loading="lazy" src="img/gallery/02.jpg" alt="Our Work Image"
-                              class="img-fluid">
-                            <figcaption>
-                              <h2>Ericeira <br> <span>Santa Cruz</span></h2>
+                    <p class="mb-4">
+                      <i class="fas fa-1x fa-phone fa-rotate-90"></i>
+                      <a href="callto:926 520 754">926 520 754</a>
+                    </p>
 
-                              <a href="img/gallery/02.jpg">View more</a>
-                            </figcaption>
-                          </figure>
-                        </div>
-                        <div class="tm-gallery-item">
-                          <figure class="effect-bubba">
-                            <img loading="lazy" src="img/gallery/03.jpg" alt="Our Work Image"
-                              class="img-fluid">
-                            <figcaption>
-                              <h2>Ericeira <br> <span>Santa Cruz</span></h2>
-                              <a href="img/gallery/03.jpg">View more</a>
-                            </figcaption>
-                          </figure>
-                        </div>
-                        <div class="tm-gallery-item">
-                          <figure class="effect-bubba">
-                            <img loading="lazy" loading="lazy" src="img/gallery/04.jpg" alt="Our Work Image"
-                              class="img-fluid">
-                            <figcaption>
-                              <h2>Ericeira <br> <span>Santa Cruz</span></h2>
-                              <a href="img/gallery/04.jpg">View more</a>
-                            </figcaption>
-                          </figure>
-                        </div>
-                        <div class="tm-gallery-item">
-                          <figure class="effect-bubba">
-                            <img loading="lazy" src="img/gallery/05.jpg" alt="Our Work Image"
-                              class="img-fluid">
-                            <figcaption>
-                              <h2>Ericeira <br> <span>Santa Cruz</span></h2>
-                              <a href="img/gallery/05.jpg">View more</a>
-                            </figcaption>
-                          </figure>
-                        </div>
-                        <div class="tm-gallery-item">
-                          <figure class="effect-bubba">
-                            <img loading="lazy" src="img/gallery/06.jpg" alt="Our Work Image"
-                              class="img-fluid">
-                            <figcaption>
-                              <h2>Ericeira <br> <span>Santa Cruz</span></h2>
-                              <a href="img/gallery/06.jpg">View more</a>
-                            </figcaption>
-                          </figure>
-                        </div>
-                        <div class="tm-gallery-item">
-                          <figure class="effect-bubba">
-                            <img loading="lazy" src="img/gallery/07.jpg" alt="Our Work Image"
-                              class="img-fluid">
-                            <figcaption>
-                              <h2>Ericeira <br> <span>Santa Cruz</span></h2>
-                              <a href="img/gallery/07.jpg">View more</a>
-                            </figcaption>
-                          </figure>
-                        </div>
-
-                        <div class="tm-gallery-item">
-                          <figure class="effect-bubba">
-                            <img loading="lazy" src="img/gallery/08.jpg" alt="Our Work Image"
-                              class="img-fluid">
-                            <figcaption>
-                              <h2>Ericeira <br> <span>Santa Cruz</span></h2>
-                              <a href="img/gallery/08.jpg">View more</a>
-                            </figcaption>
-                          </figure>
-                        </div>
-                        <div class="tm-gallery-item">
-                          <figure class="effect-bubba">
-                            <img loading="lazy" src="img/gallery/09.jpg" alt="Our Work Image"
-                              class="img-fluid">
-                            <figcaption>
-                              <h2>Ericeira <br> <span>Santa Cruz</span></h2>
-                              <a href="img/gallery/09.jpg">View more</a>
-                            </figcaption>
-                          </figure>
-                        </div>
-
-                      </div>
-                    </div>
+                    <p class="mb-3">
+                      <i class="fas fa-1x fa-mail-bulk "></i>
+                      <a
+                        href="mailto:demoniosdolizandro@gmail.com">demoniosdolizandro@gmail.com</a>
+                    </p>
                   </div>
                 </div>
-              </section>
-            </div>
+              </div>
 
-            <div class="tm-section-wrap bg-white">
-              <section id="clients" class="row tm-section">
-                <div class="col-12 tm-section-pad mb-5">
-                  <div class="tm-flex-item-left">
-                    <div>
-                      <h2 class="tm-color-primary tm-section-title mb-4">O que
-                        dizem de nós</h2>
-                      <p class="mb-5">
-                        Estes são alguns dos testemunhos do II Trail dos
-                        Demónios
-                        do Lizandro.
-                      </p>
-                    </div>
-
-                    <div class="tm-gallery-1">
-                      <div class="tm-gallery-item">
-                        <figure class="effect-bubba">
-                          <img loading="lazy" src="img/testemunhos-carla.png"
-                            alt="Our Work Image" class="img-fluid">
-                          <figcaption>
-                            <h2>Carla <span>Henriques</span></h2>
-                            <a href="img/testemunhos-carla.png">View more</a>
-                          </figcaption>
-                        </figure>
-                      </div>
-                      <div class="tm-gallery-item">
-                        <figure class="effect-bubba">
-                          <img loading="lazy" src="img/testemunhos-castela.png"
-                            alt="Our Work Image" class="img-fluid">
-                          <figcaption>
-                            <h2>Samuel <span>Castela</span></h2>
-
-                            <a href="img/testemunhos-castela.png">View more</a>
-                          </figcaption>
-                        </figure>
-                      </div>
-                      <div class="tm-gallery-item">
-                        <figure class="effect-bubba">
-                          <img loading="lazy" src="img/testemunhos-catia.png"
-                            alt="Our Work Image" class="img-fluid">
-                          <figcaption>
-                            <h2>Cátia <span>Nascimento</span></h2>
-
-                            <a href="img/testemunhos-catia.png">View more</a>
-                          </figcaption>
-                        </figure>
-                      </div>
-                      <div class="tm-gallery-item">
-                        <figure class="effect-bubba">
-                          <img loading="lazy" src="img/testemunhos-orlando.png"
-                            alt="Our Work Image" class="img-fluid">
-                          <figcaption>
-                            <h2>Orlando <span>Duarte</span></h2>
-
-                            <a href="img/testemunhos-orlando.png">View more</a>
-                          </figcaption>
-                        </figure>
-                      </div>
-                      <div class="tm-gallery-item">
-                        <figure class="effect-bubba">
-                          <img loading="lazy" src="img/testemunhos-vitor.png"
-                            alt="Our Work Image" class="img-fluid">
-                          <figcaption>
-                            <h2>Vitor <span>Ribeiro</span></h2>
-
-                            <a href="img/testemunhos-vitor.png">View more</a>
-                          </figcaption>
-                        </figure>
-                      </div>
-                      <div class="tm-gallery-item">
-                        <figure class="effect-bubba">
-                          <img loading="lazy" src="img/testemunhos-zarro.png"
-                            alt="Our Work Image" class="img-fluid">
-                          <figcaption>
-                            <h2>Mário <span>Zarro</span></h2>
-
-                            <a href="img/testemunhos-zarro.png">View more</a>
-                          </figcaption>
-                        </figure>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </div>
-              </section>
-            </div>
-
-            <div class="tm-section-wrap bg-white">
-              <section id="talk" class="row tm-section">
-                <div class="col-xl-12 mb-5">
-                  <div class="tm-double-border-1 tm-border-gray">
-                    <div class="tm-double-border-2 tm-border-gray tm-box-pad">
-                      <h2
-                        class="tm-color-primary tm-section-title mb-4">Contactos</h2>
-
-                      <p class="mb-4">
-                        <i class="fas fa-1x fa-phone fa-rotate-90"></i>
-                        <a href="callto:926 520 754">926 520 754</a>
-                      </p>
-
-                      <p class="mb-3">
-                        <i class="fas fa-1x fa-mail-bulk "></i>
-                        <a
-                          href="mailto:demoniosdolizandro@gmail.com">demoniosdolizandro@gmail.com</a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-              </section>
-            </div>
-          </main>
-        </div>
+            </section>
+          </div>
+        </main>
       </div>
-      <script src="js/jquery.min.js"></script>
-      <script src="js/jquery.singlePageNav.min.js"></script>
-      <script src="js/parallax.min.js"></script>
-      <script src="slick/slick.min.js"></script>
-      <script src="js/jquery.magnific-popup.min.js"></script>
-      <script src="js/templatemo-scripts.js"></script>
-    </body>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/templatemo-scripts.js"></script>
+  </body>
 
-  </html>
+</html>
