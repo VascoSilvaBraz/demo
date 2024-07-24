@@ -5823,8 +5823,11 @@
     font-style: normal;
     font-weight: 900;
     font-display: auto;
-    src: url(../webfonts/Elvishwild.woff2) format("woff2"),
-        url(../webfonts/Elvishwild.TTF) format("truetype")
+    src: url(../webfonts/Elvishwild.eot);
+    src: url(../webfonts/Elvishwild.eot?#iefix) format("embedded-opentype"),
+        url(../webfonts/Elvishwild.woff2) format("woff2"),
+        url(../webfonts/Elvishwild.woff) format("woff"),
+        url(../webfonts/Elvishwild.ttf) format("truetype")
 }
 
 @font-face {
